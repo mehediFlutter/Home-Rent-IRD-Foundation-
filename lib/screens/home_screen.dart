@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:home_rent/widgets/assets_path.dart';
 import 'package:home_rent/widgets/re_usable_bottom.dart/bottom_with_svg_picture.dart';
 import 'package:home_rent/widgets/re_usable_base_screen.dart';
 
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: BottomWithSVGPicture(
                     height: 48,
                     width: 48,
-                    imagePath: 'assets/icons/filter.svg',
+                    imagePath: filteredSVG,
                   ),
                 )
               ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'assets_path.dart';
+
 class UserProfileBanner extends StatelessWidget {
   final String name;
   final bool isNotified;
@@ -50,7 +52,7 @@ class UserProfileBanner extends StatelessWidget {
         },
         child: Stack(
           children: [
-            SvgPicture.asset('assets/icons/notification.svg'),
+            SvgPicture.asset(notificationSVG),
             isNotified
                 ? Positioned(
                     right: 0,
