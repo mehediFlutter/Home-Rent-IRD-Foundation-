@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'material_color.dart';
+import '../material_color.dart';
+import 'input_decaration_theme.dart';
 
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
@@ -38,5 +39,7 @@ class AppTheme {
     ),
     brightness: Brightness.light,
     primaryColor: MaterialColor(0xFFEC1C24, AppColors().color),
+    inputDecorationTheme: AppInputDecorationTheme.inputDecorationTheme,
   );
 }
+

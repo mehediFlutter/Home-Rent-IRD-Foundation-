@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:home_rent/material_app/theme.dart';
+import 'package:home_rent/material_app/theme/theme.dart';
 
 import '../screens/home_screen.dart';
 
