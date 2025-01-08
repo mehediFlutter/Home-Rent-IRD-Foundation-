@@ -16,8 +16,7 @@ class NearFromYouAndSeeMore extends StatelessWidget {
           text,
           style: Theme.of(context)
               .textTheme
-              .titleMedium!
-              .copyWith(fontWeight: FontWeight.w500),
+              .titleMedium
         ),
         Text(
          seeMore,

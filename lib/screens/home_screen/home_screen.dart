@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:home_rent/getx_controller/home_item_list_controller.dart';
 import 'package:home_rent/screens/home_screen/near_from_you_item.dart';
 import 'package:home_rent/widgets/assets_path.dart';
 import 'package:home_rent/widgets/re_usable_bottom.dart/re_usable_bottom_with_svg_picture.dart';
@@ -12,6 +11,7 @@ import 'package:home_rent/widgets/re_usable_bottom.dart/re_usable_bottom_with_te
 import '../../widgets/const.dart';
 import '../../widgets/search_text_field/search_text_field.dart';
 import '../../widgets/user_profile_banner.dart';
+import 'best_for_you_item.dart';
 import 'near_from_you_and_see_more.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ' Duplex ',
     ' Loft '
   ];
+    int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
     return ReUsableBaseScreen(
@@ -48,13 +49,13 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Re-Usable User Profile Banner
-          
+
               //-------- advantage of this Re-Usable Widget ---------
               // You can pass here location tap function (tap on drop-down icon),
               // You can also pass here notification tap function
               // here set a bool for notification toggle
               // if isNotified == true, then show red toggle top-right of notification
-          
+
               UserProfileBanner(
                 name: 'Jakarta',
                 isNotified: true,
@@ -72,14 +73,14 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: Get.height * 0.01,
               ),
-          
+
               Row(
                 children: [
                   // Text Field
                   SearchTextField(
                     searchController: searchController,
                   ),
-          
+
                   // Filtered Bottom
                   Padding(
                     padding: EdgeInsets.only(left: 10),
@@ -103,7 +104,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5),
-                      child: ReUsableBottomWithText(text: homeItem[index]),
+                      child: ReUsableBottomWithText(
+                        text: homeItem[index],
+                        isGradient:  selectedIndex == index,
+                         onTap: () {
+                        setState(() {
+                          selectedIndex = index;
+                        });
+                      },
+
+                        ),
                     );
                   },
                 ),
@@ -146,14 +156,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: Get.height * 0.025,
               ),
               ListView.builder(
-                
                 shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                itemCount: 10,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: bestForYouItemList.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(right: 16),
-                    child: Text("Hello"),
+                    padding: const EdgeInsets.only(right: 10, bottom: 15),
+                    child: BestForYouItem(
+                      imagePath: bestForYouItemList[index]['image'],
+                      title: bestForYouItemList[index]['title'],
+                      price: bestForYouItemList[index]['price'],
+                      bedRoom: bestForYouItemList[index]['bed-room'],
+                      bathRoom: bestForYouItemList[index]['bath-room'],
+                    ),
                   );
                 },
               ),

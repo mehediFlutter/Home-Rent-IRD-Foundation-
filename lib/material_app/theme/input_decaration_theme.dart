@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_rent/material_app/material_color.dart';
 
 import '../../widgets/const.dart';
 

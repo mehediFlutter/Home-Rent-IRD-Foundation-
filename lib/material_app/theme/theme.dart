@@ -19,7 +19,7 @@ class AppTheme {
       titleLarge:
           GoogleFonts.raleway(fontSize: 18, fontWeight: FontWeight.bold),
       titleMedium:
-          GoogleFonts.raleway(fontSize: 16, fontWeight: FontWeight.bold),
+          GoogleFonts.raleway(fontSize: 16, fontWeight: FontWeight.w500),
       titleSmall:
           GoogleFonts.raleway(fontSize: 14, fontWeight: FontWeight.bold),
       bodyLarge:
