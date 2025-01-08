@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_rent/material_app/theme/theme.dart';
 
-import '../screens/home_screen.dart';
+import '../screens/home_screen/home_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

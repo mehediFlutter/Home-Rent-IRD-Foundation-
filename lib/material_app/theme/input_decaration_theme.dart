@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:home_rent/material_app/material_color.dart';
 
+import '../../widgets/const.dart';
+
 class AppInputDecorationTheme {
   static InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
+    filled: true,
+    fillColor: textFieldFillColor,
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
+      borderSide: BorderSide.none,
     ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10),
-      borderSide: BorderSide(
-        color: MaterialColor(0xFFEC1C24, AppColors().color),
-      ),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10),
-      borderSide: BorderSide(
-        color: MaterialColor(0xFFEC1C24, AppColors().color),
-      ),
-    ),
+    
   );
 }

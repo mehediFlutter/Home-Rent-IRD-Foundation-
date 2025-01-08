@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const String aboutJakarta =
     "Jakarta lying on the northwest coast of Java, the world's most populous island";
 
+const Color textFieldFillColor = Color(0XFFF7F7F7);
 
 
 
@@ -23,3 +24,5 @@ const width15 = SizedBox(width: 15);
 const width20 = SizedBox(width: 20);
 const width25 = SizedBox(width: 25);
 const width30 = SizedBox(width: 30);
+
+

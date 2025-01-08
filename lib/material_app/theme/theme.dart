@@ -28,7 +28,7 @@ class AppTheme {
           GoogleFonts.raleway(fontSize: 14, fontWeight: FontWeight.normal),
       bodySmall: GoogleFonts.raleway(
           fontSize: 12,
-          fontWeight: FontWeight.normal,
+          fontWeight: FontWeight.w400,
           color: Color(0xFF838383)),
       labelLarge:
           GoogleFonts.raleway(fontSize: 16, fontWeight: FontWeight.bold),
