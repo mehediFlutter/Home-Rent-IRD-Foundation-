@@ -6,6 +6,9 @@ class ReUsableBaseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: child);
+    return SafeArea(
+        child: Scaffold(
+      body: child,
+    ));
   }
 }

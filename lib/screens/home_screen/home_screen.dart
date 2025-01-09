@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:home_rent/screens/home_screen/near_from_you_item.dart';
+import 'package:home_rent/screens/home_screen/home_screen_component.dart/near_from_you_item.dart';
 import 'package:home_rent/widgets/assets_path.dart';
 import 'package:home_rent/widgets/re_usable_bottom.dart/re_usable_bottom_with_svg_picture.dart';
 import 'package:home_rent/widgets/re_usable_base_screen.dart';
@@ -11,8 +11,8 @@ import 'package:home_rent/widgets/re_usable_bottom.dart/re_usable_bottom_with_te
 import '../../widgets/const.dart';
 import '../../widgets/search_text_field/search_text_field.dart';
 import '../../widgets/user_profile_banner.dart';
-import 'best_for_you_item.dart';
-import 'near_from_you_and_see_more.dart';
+import 'home_screen_component.dart/best_for_you_item.dart';
+import 'home_screen_component.dart/near_from_you_and_see_more.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,12 +34,11 @@ class _HomeScreenState extends State<HomeScreen> {
     ' Duplex ',
     ' Loft '
   ];
-    int selectedIndex = -1;
+  int selectedIndex = -1;
   @override
   Widget build(BuildContext context) {
     return ReUsableBaseScreen(
-        child: Scaffold(
-      body: Padding(
+      child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15,
         ),
@@ -106,14 +105,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 5),
                       child: ReUsableBottomWithText(
                         text: homeItem[index],
-                        isGradient:  selectedIndex == index,
-                         onTap: () {
-                        setState(() {
-                          selectedIndex = index;
-                        });
-                      },
-
-                        ),
+                        isGradient: selectedIndex == index,
+                        onTap: () {
+                          setState(() {
+                            selectedIndex = index;
+                          });
+                        },
+                      ),
                     );
                   },
                 ),
@@ -128,6 +126,9 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: Get.height * 0.025,
               ),
+
+              // Near From You item
+
               SizedBox(
                 height: 272,
                 child: ListView.builder(
@@ -140,6 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         imagePath: nearFromYouItemList[index]['image'],
                         title: nearFromYouItemList[index]['title'],
                         subTitle: nearFromYouItemList[index]['sub-title'],
+                        distance: nearFromYouItemList[index]['distance'],
                       ),
                     );
                   },
@@ -155,6 +157,8 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: Get.height * 0.025,
               ),
+
+              // Best for you item
               ListView.builder(
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
@@ -176,6 +180,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-    ));
+    );
   }
 }

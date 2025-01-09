@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_rent/material_app/theme/theme.dart';
 
+import '../routes/routes.dart';
 import '../screens/home_screen/home_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Home Rent IRD Foundation',
       theme: AppTheme.lightTheme,
       home: HomeScreen(),
+       getPages: Routes.pages
     );
   }
 }

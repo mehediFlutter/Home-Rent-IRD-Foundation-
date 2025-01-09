@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:home_rent/widgets/const.dart';
 
-import '../../widgets/assets_path.dart';
+import '../../../widgets/assets_path.dart';
 
 class BestForYouItem extends StatelessWidget {
   final String imagePath;
