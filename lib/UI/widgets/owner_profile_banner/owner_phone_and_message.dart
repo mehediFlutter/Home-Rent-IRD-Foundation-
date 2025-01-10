@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../controller/const/assets_path.dart';
-
 class OwnerPhoneAndMessage extends StatelessWidget {
   final String imagePath;
   const OwnerPhoneAndMessage({

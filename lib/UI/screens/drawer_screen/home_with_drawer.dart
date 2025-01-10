@@ -24,15 +24,17 @@ class HomeScreenWithDrawerState extends State<HomeScreenWithDrawer> {
           Scaffold(
             backgroundColor: Color(0XFF0A8ED9),
             body: Container(
-              padding: EdgeInsets.only(left: 20, top: 50),
+              padding: EdgeInsets.only(top: 50),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Menu",
-                    style: TextStyle(color: Colors.white, fontSize: 22),
-                  ),
                   SizedBox(height: 20),
+                  Container(
+                    height: 40,
+                    width: 192,
+                    decoration: BoxDecoration(
+                        color: Colors.red, borderRadius: drawerItemBorderRadius()),
+                  ),
                   drawerItem(Icons.home, "Home"),
                 ],
               ),
@@ -64,6 +66,7 @@ class HomeScreenWithDrawerState extends State<HomeScreenWithDrawer> {
       ),
     );
   }
+
 
   Widget drawerItem(IconData icon, String title) {
     return Padding(
