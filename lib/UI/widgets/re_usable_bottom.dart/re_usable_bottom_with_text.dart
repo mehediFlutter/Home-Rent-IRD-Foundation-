@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 class ReUsableBottomWithText extends StatelessWidget {
   final String text;
   final bool isGradient;
-    final VoidCallback onTap;
+  final VoidCallback onTap;
   const ReUsableBottomWithText({
     super.key,
     this.isGradient = false,
-    required this.text, required this.onTap,
+    required this.text,
+    required this.onTap,
   });
 
   @override
@@ -16,7 +17,6 @@ class ReUsableBottomWithText extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: Duration(microseconds: 900),
-        padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
             color: isGradient ? null : Color(0xFFF7F7F7),
             gradient: isGradient
@@ -27,13 +27,16 @@ class ReUsableBottomWithText extends StatelessWidget {
                 : null,
             borderRadius: BorderRadius.circular(10)),
         child: Center(
-            child: Text(
-          text,
-          style: Theme.of(context)
-              .textTheme
-              .titleSmall!
-              .copyWith(color: isGradient ? Colors.white : Color(0xFF838383)),
-        )),
+            child: Padding( 
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                        text,
+                        style: Theme.of(context)
+                .textTheme
+                .titleSmall!
+                .copyWith(color: isGradient ? Colors.white : Color(0xFF838383)),
+                      ),
+            )),
       ),
     );
   }

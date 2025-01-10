@@ -49,13 +49,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Re-Usable User Profile Banner
-              
+
                     //-------- advantage of this Re-Usable Widget ---------
                     // You can pass here location tap function (tap on drop-down icon),
                     // You can also pass here notification tap function
                     // here set a bool for notification toggle
                     // if isNotified == true, then show red toggle top-right of notification
-              
+
                     UserProfileBanner(
                       name: 'Jakarta',
                       isNotified: true,
@@ -73,6 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       height: Get.height * 0.01,
                     ),
+
                     Row(
                       children: [
                         // Text Field
@@ -80,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           searchController:
                               searchControllerGet.searchController.value,
                         ),
-              
+
                         // Filtered Bottom
                         Padding(
                           padding: EdgeInsets.only(left: 10),
@@ -106,15 +107,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
                           return Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 5),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 5),
                               child: Obx(() {
                                 return ReUsableBottomWithText(
                                   text: homeItem[index],
-                                  isGradient:
-                                      changeSelectedBottomColor.selectedIndex.value ==
-                                          index,
+                                  isGradient: changeSelectedBottomColor
+                                          .selectedIndex.value ==
+                                      index,
                                   onTap: () {
-                                    changeSelectedBottomColor.changeColor(index);
+                                    changeSelectedBottomColor
+                                        .changeColor(index);
                                   },
                                 );
                               }));
@@ -131,9 +134,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       height: Get.height * 0.025,
                     ),
-              
+
                     // Near From You item
-              
+
                     SizedBox(
                       height: 272,
                       child: ListView.builder(
@@ -160,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       height: Get.height * 0.025,
                     ),
-              
+
                     // Best for you item
                     ListView.builder(
                       shrinkWrap: true,

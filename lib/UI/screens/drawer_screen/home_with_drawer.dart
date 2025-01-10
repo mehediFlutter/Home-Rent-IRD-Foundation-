@@ -27,123 +27,125 @@ class HomeScreenWithDrawerState extends State<HomeScreenWithDrawer> {
             backgroundColor: Color(0XFF0A8ED9),
             body: Container(
               padding: EdgeInsets.only(top: Get.height * 0.14),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Home',
-                    iconPath: drawerHomeSVG,
-                    boolValue: drawerController.isHomeTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isHomeTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Profile',
-                    iconPath: drawerProfileSVG,
-                    boolValue: drawerController.isProfileTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isProfileTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Nearby',
-                    iconPath: drawerLocationSVG,
-                    boolValue: drawerController.isNearbyTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isNearbyTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  line,
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Bookmark',
-                    iconPath: saveIconSVG,
-                    boolValue: drawerController.isBookmarkTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isBookmarkTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Notification',
-                    iconPath: drawerNotificationSVG,
-                    boolValue: drawerController.isNotificationTap,
-                    isNotified: true,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isNotificationTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Message',
-                    iconPath: drawerMessageSVG,
-                    boolValue: drawerController.isMessageTap,
-                    isNotified: true,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isMessageTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  line,
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Settings',
-                    iconPath: drawerSettingSVG,
-                    boolValue: drawerController.isSettingTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isSettingTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Help',
-                    iconPath: drawerHelpSVG,
-                    boolValue: drawerController.isHelpTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isHelpTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                  drawerItemHeight,
-                  DrawerItem(
-                    drawerController: drawerController,
-                    text: 'Logout',
-                    iconPath: drawerLogOutSVG,
-                    boolValue: drawerController.isLogOutTap,
-                    onTap: () {
-                      drawerController
-                          .setActiveItem(drawerController.isLogOutTap);
-                      drawerController.closeDrawer();
-                    },
-                  ),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Home',
+                      iconPath: drawerHomeSVG,
+                      boolValue: drawerController.isHomeTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isHomeTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Profile',
+                      iconPath: drawerProfileSVG,
+                      boolValue: drawerController.isProfileTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isProfileTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Nearby',
+                      iconPath: drawerLocationSVG,
+                      boolValue: drawerController.isNearbyTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isNearbyTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    line,
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Bookmark',
+                      iconPath: saveIconSVG,
+                      boolValue: drawerController.isBookmarkTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isBookmarkTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Notification',
+                      iconPath: drawerNotificationSVG,
+                      boolValue: drawerController.isNotificationTap,
+                      isNotified: true,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isNotificationTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Message',
+                      iconPath: drawerMessageSVG,
+                      boolValue: drawerController.isMessageTap,
+                      isNotified: true,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isMessageTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    line,
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Settings',
+                      iconPath: drawerSettingSVG,
+                      boolValue: drawerController.isSettingTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isSettingTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Help',
+                      iconPath: drawerHelpSVG,
+                      boolValue: drawerController.isHelpTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isHelpTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                    drawerItemHeight,
+                    DrawerItem(
+                      drawerController: drawerController,
+                      text: 'Logout',
+                      iconPath: drawerLogOutSVG,
+                      boolValue: drawerController.isLogOutTap,
+                      onTap: () {
+                        drawerController
+                            .setActiveItem(drawerController.isLogOutTap);
+                        drawerController.closeDrawer();
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

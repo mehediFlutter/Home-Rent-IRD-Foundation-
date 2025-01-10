@@ -10,6 +10,7 @@ const String drawerSVGPath     = '$assetsPath/drawer_icons';
 
 // assets image 
 const String ownerProfileSVG        = '$imagesSVGPath/owner_profile.svg';
+const String mapPNG        = '$imagesSVGPath/map.png';
 
 // assets icon
 const String filteredSVG          = '$iconsSVGPath/filter.svg';

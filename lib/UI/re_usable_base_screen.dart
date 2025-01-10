@@ -9,6 +9,7 @@ class ReUsableBaseScreen extends StatelessWidget {
     return SafeArea(
       
         child: Scaffold(
+        
           backgroundColor: Colors.white,
       body: child,
     ));
