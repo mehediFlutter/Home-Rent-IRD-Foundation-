@@ -10,7 +10,7 @@ import 'package:home_rent/controller/const/const.dart';
 import 'package:home_rent/controller/getx_controller/show_more_controller.dart';
 import '../../../controller/const/assets_path.dart';
 import '../../../controller/getx_controller/gallery_image_visible_controller.dart';
-import '../../widgets/owner_profile_banner/owner_profile_banner.dart';
+import 'details_screen_conponent.dart/owner_profile_banner/owner_profile_banner.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
@@ -172,8 +172,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 Positioned.fill(
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Colors.black.withOpacity(0.6),
-                                      borderRadius: BorderRadius.circular(10),
+                                      color:
+                                          const Color.fromRGBO(90, 86, 86, 0.6),
+                                      borderRadius: BorderRadius.circular(8),
                                     ),
                                     alignment: Alignment.center,
                                     child: Text(
@@ -207,13 +208,30 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       child: ClipRect(
                         child: BackdropFilter(
                           filter: ImageFilter.blur(
-                            sigmaX: 2.0,
-                            sigmaY: 2.0,
+                            sigmaX: 0.0, // Increased blur strength
+                            sigmaY: 4.0,
                           ),
                           child: Container(
                             width: double.infinity,
-                            height: 60,
-                            color: Colors.white.withValues(alpha: (0.3 * 255)),
+                            height: 65,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  Colors.white.withAlpha((0.1 * 255).toInt()),
+                                  Colors.white.withAlpha((0.5 * 255).toInt()),
+                                  Colors.white.withAlpha((0.7 * 255).toInt()),
+                                  Colors.white.withAlpha((1.0 * 255).toInt()),
+                                ],
+                                stops: [
+                                  0.0,
+                                  0.3,
+                                  0.6,
+                                  1.0
+                                ], // Adjust the gradual transition
+                              ),
+                            ),
                           ),
                         ),
                       ),

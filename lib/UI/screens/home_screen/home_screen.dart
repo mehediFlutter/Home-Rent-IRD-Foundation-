@@ -13,7 +13,7 @@ import 'package:home_rent/controller/getx_controller/drawer_controller.dart';
 import '../../../controller/getx_controller/details_controller.dart';
 import '../../../controller/getx_controller/search_controller.dart';
 import '../../../controller/const/const.dart';
-import '../../widgets/search_text_field/search_text_field.dart';
+import 'home_screen_component.dart/search_text_field/search_text_field.dart';
 import '../../widgets/user_profile_banner.dart';
 import 'home_screen_component.dart/best_for_you_item.dart';
 import 'home_screen_component.dart/near_from_you_and_see_more.dart';
@@ -77,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       children: [
                         // Text Field
+                        
                         SearchTextField(
                           searchController:
                               searchControllerGet.searchController.value,
@@ -108,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (context, index) {
                           return Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 5),
+                                  const EdgeInsets.symmetric(horizontal: 5,vertical: 2),
                               child: Obx(() {
                                 return ReUsableBottomWithText(
                                   text: homeItem[index],

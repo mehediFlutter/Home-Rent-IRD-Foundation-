@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:home_rent/controller/const/const.dart';
 
 import '../../../../controller/const/assets_path.dart';
 
@@ -10,6 +9,7 @@ class BestForYouItem extends StatelessWidget {
   final String price;
   final String bedRoom;
   final String bathRoom;
+
   const BestForYouItem({
     super.key,
     required this.imagePath,
@@ -21,71 +21,95 @@ class BestForYouItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 74,
-      width: double.infinity,
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 18),
-            child: SizedBox(
-              height: 74,
-              width: 70,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.network(
-                  imagePath,
-                  fit: BoxFit.cover,
-                ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        double screenWidth = constraints.maxWidth;
+
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.network(
+                imagePath,
+                height: screenWidth * 0.21, 
+                width: screenWidth * 0.2,
+                fit: BoxFit.cover,
               ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(title, style: Theme.of(context).textTheme.titleMedium),
-                Text(
-                  price,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall!
-                      .copyWith(color: Colors.blue),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        SvgPicture.asset(bedroomSVG),
-                        width10,
-                        Text(
-                          bedRoom,
-                          style: Theme.of(context).textTheme.bodySmall,
-                        )
-                      ],
+            SizedBox(width: screenWidth * 0.04), 
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        title,
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              fontSize: screenWidth * 0.045, 
+                            ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
-                    Expanded(child: SizedBox()),
-                    Row(
-                      children: [
-                        SvgPicture.asset(bathroomSVG),
-                        width10,
-                        Text(
-                          bedRoom,
-                          style: Theme.of(context).textTheme.bodySmall,
-                        )
-                      ],
+                  ),
+                  SizedBox(height: 4),
+                  SizedBox(
+                    width: double.infinity,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        price,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: Colors.blue,
+                              fontSize: screenWidth * 0.04, // Responsive text size
+                            ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
-                     Expanded(child: SizedBox()),
-                  ],
-                ),
-              ],
+                  ),
+                  SizedBox(height: 6),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          SvgPicture.asset(bedroomSVG, height: 16, width: 16),
+                          SizedBox(width: screenWidth * 0.02),
+                          Text(
+                            bedRoom,
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  fontSize: screenWidth * 0.035, // Responsive text size
+                                ),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Row(
+                        children: [
+                          SvgPicture.asset(bathroomSVG, height: 16, width: 16),
+                          SizedBox(width: screenWidth * 0.02),
+                          Text(
+                            bathRoom,
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  fontSize: screenWidth * 0.035, // Responsive text size
+                                ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
-      ),
+          ],
+        );
+      },
     );
   }
 }
-
