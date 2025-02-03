@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../getx_controller/const/const.dart';
+import '../../../controller/const/const.dart';
 
 class AppInputDecorationTheme {
   static InputDecorationTheme inputDecorationTheme = InputDecorationTheme(

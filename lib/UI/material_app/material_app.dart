@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_rent/UI/material_app/theme/theme.dart';
 import 'package:home_rent/UI/screens/drawer_screen/home_with_drawer.dart';
-import '../../getx_controller/routes/routes.dart';
+import '../../controller/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

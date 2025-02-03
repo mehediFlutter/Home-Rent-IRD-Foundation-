@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../getx_controller/const/assets_path.dart';
-import '../../../../../getx_controller/const/const.dart';
+import '../../../../../controller/const/assets_path.dart';
+import '../../../../../controller/const/const.dart';
 import 'owner_phone_and_message.dart';
 
 class OwnerProfileBanner extends StatelessWidget {

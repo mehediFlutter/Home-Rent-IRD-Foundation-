@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import '../../getx_controller/const/assets_path.dart';
-import '../../getx_controller/getx_controller/drawer_controller.dart';
+import '../../controller/const/assets_path.dart';
+import '../../controller/getx_controller/drawer_controller.dart';
 
 class UserProfileBanner extends StatelessWidget {
   final String name;

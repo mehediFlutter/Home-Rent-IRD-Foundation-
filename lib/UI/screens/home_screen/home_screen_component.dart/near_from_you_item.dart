@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:home_rent/getx_controller/const/assets_path.dart';
+import 'package:home_rent/controller/const/assets_path.dart';
 import '../../../widgets/shimmer_widget/shimmer_widget.dart';
 
 class NearForYouItem extends StatelessWidget {
