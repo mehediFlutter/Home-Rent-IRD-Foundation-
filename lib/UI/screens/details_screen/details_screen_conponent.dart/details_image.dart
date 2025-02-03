@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:home_rent/controller/const/const.dart';
-import '../../../../controller/const/assets_path.dart';
+import 'package:home_rent/getx_controller/const/const.dart';
+import '../../../../getx_controller/const/assets_path.dart';
 import '../../../widgets/shimmer_widget/shimmer_widget.dart';
 import 'item_on_details_image.dart';
 

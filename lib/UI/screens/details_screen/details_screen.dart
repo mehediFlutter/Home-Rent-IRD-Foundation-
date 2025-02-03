@@ -6,10 +6,10 @@ import 'package:get/get.dart';
 import 'package:home_rent/UI/screens/details_screen/details_screen_conponent.dart/details_image.dart';
 import 'package:home_rent/UI/re_usable_base_screen.dart';
 import 'package:home_rent/UI/widgets/re_usable_bottom.dart/re_usable_bottom_with_text.dart';
-import 'package:home_rent/controller/const/const.dart';
-import 'package:home_rent/controller/getx_controller/show_more_controller.dart';
-import '../../../controller/const/assets_path.dart';
-import '../../../controller/getx_controller/gallery_image_visible_controller.dart';
+import 'package:home_rent/getx_controller/const/const.dart';
+import 'package:home_rent/getx_controller/getx_controller/show_more_controller.dart';
+import '../../../getx_controller/const/assets_path.dart';
+import '../../../getx_controller/getx_controller/gallery_image_visible_controller.dart';
 import 'details_screen_conponent.dart/owner_profile_banner/owner_profile_banner.dart';
 
 class DetailsScreen extends StatefulWidget {

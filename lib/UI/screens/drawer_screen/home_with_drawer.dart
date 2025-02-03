@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:home_rent/UI/re_usable_base_screen.dart';
 import 'package:home_rent/UI/screens/home_screen/home_screen.dart';
-import 'package:home_rent/controller/const/assets_path.dart';
+import 'package:home_rent/getx_controller/const/assets_path.dart';
 
-import '../../../controller/getx_controller/drawer_controller.dart';
+import '../../../getx_controller/getx_controller/drawer_controller.dart';
 import 'drawer_component/drawer_item.dart';
 
 class HomeScreenWithDrawer extends StatefulWidget {

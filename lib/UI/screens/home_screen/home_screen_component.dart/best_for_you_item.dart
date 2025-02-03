@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../controller/const/assets_path.dart';
+import '../../../../getx_controller/const/assets_path.dart';
 
 class BestForYouItem extends StatelessWidget {
   final String imagePath;

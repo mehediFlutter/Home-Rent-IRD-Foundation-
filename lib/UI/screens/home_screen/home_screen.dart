@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:home_rent/controller/getx_controller/change_select_bottom_color.dart';
+import 'package:home_rent/getx_controller/getx_controller/change_select_bottom_color.dart';
 import 'package:home_rent/UI/screens/home_screen/home_screen_component.dart/near_from_you_item.dart';
-import 'package:home_rent/controller/const/assets_path.dart';
+import 'package:home_rent/getx_controller/const/assets_path.dart';
 import 'package:home_rent/UI/widgets/re_usable_bottom.dart/re_usable_bottom_with_svg_picture.dart';
 import 'package:home_rent/UI/re_usable_base_screen.dart';
 import 'package:home_rent/UI/widgets/re_usable_bottom.dart/re_usable_bottom_with_text.dart';
-import 'package:home_rent/controller/getx_controller/drawer_controller.dart';
+import 'package:home_rent/getx_controller/getx_controller/drawer_controller.dart';
 
-import '../../../controller/getx_controller/details_controller.dart';
-import '../../../controller/getx_controller/search_controller.dart';
-import '../../../controller/const/const.dart';
+import '../../../getx_controller/getx_controller/details_controller.dart';
+import '../../../getx_controller/getx_controller/search_controller.dart';
+import '../../../getx_controller/const/const.dart';
 import 'home_screen_component.dart/search_text_field/search_text_field.dart';
 import '../../widgets/user_profile_banner.dart';
 import 'home_screen_component.dart/best_for_you_item.dart';

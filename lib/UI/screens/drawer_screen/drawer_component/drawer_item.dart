@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:home_rent/UI/screens/drawer_screen/drawer_component/drawer_const.dart';
-import 'package:home_rent/controller/const/const.dart';
-import '../../../../controller/getx_controller/drawer_controller.dart';
+import 'package:home_rent/getx_controller/const/const.dart';
+import '../../../../getx_controller/getx_controller/drawer_controller.dart';
 
 class DrawerItem extends StatelessWidget {
   final String text;

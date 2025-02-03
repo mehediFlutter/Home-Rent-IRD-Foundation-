@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../../controller/const/assets_path.dart';
+import '../../../../../getx_controller/const/assets_path.dart';
 
 class SearchTextField extends StatelessWidget {
   final TextEditingController searchController;
